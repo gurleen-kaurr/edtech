@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions Parser</title>
+    <link rel="icon" href="img/logo.png" />
+  </head>
+  <body>
+    <h1>JavaScript Quiz</h1>
+    <button id="parseButton">Parse Questions</button>
+
+    <div id="output"></div>
+
+    <script>
+      const data = `[
+      {
+        "question": "What event is triggered when an element is clicked in JavaScript?",
+        "options": ["focus", "click", "mouseover", "dblclick"],
+        "answer": "click",
+        "explanation": "The 'click' event is triggered when an element is clicked by the user, allowing for event handling to take place. Other events like 'focus' and 'mouseover' are related to specific actions but are not the same as a click."
+      },
+      {
+        "question": "Which of the following is a correct way to create a function in JavaScript?",
+        "options": ["function myFunction() {}", "create myFunction() {}", "def myFunction() {}", "fun myFunction() {}"],
+        "answer": "function myFunction() {}",
+        "explanation": "In JavaScript, functions are defined using the 'function' keyword followed by a name and parentheses. The other options are not valid syntax in JavaScript."
+      }
+    ]`;
+
+      function convertStringToArrayObject(jsonString) {
+        try {
+          const questionsArray = JSON.parse(jsonString);
+          return questionsArray;
+        } catch (error) {
+          console.error("Error parsing JSON string:", error.message);
+          return null;
+        }
+      }
+
+      document.getElementById("parseButton").onclick = function () {
+        const questionsArray = convertStringToArrayObject(data);
+
+        if (questionsArray) {
+          const outputDiv = document.getElementById("output");
+          outputDiv.innerHTML = ""; // Clear previous output
+
+          questionsArray.forEach((questionObj, index) => {
+            const questionHTML = `
+            <h2>Q${index + 1}: ${questionObj.question}</h2>
+            <p>Options: ${questionObj.options.join(", ")}</p>
+            <p>Correct Answer: ${questionObj.answer}</p>
+            <p>Explanation: ${questionObj.explanation}</p>
+            <hr>
+          `;
+            outputDiv.innerHTML += questionHTML;
+          });
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EdTalks - Inspiring Minds</title>
+    <link rel="icon" href="img/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Global styles */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        background-color: #5ccafd;
+        padding: 20px 60px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 24px;
+      }
+      .cta-button {
+        background-color: #f56172;
+        color: #fff;
+        padding: 15px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .cta-button:hover {
+        background-color: #f9835f;
+      }
+
+      /* Hero Section */
+      .hero {
+        background-image: url("https://example.com/hero-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+      .hero p {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      /* About Section */
+      .about {
+        padding: 60px 0;
+        text-align: center;
+      }
+      .about h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .about p {
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      /* Talks Section */
+      .talks {
+        background-color: #f9f9f9;
+        padding: 60px 0;
+      }
+      .talks h2 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .talks-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .talk {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .talk img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .talk h3 {
+        font-size: 24px;
+        margin-top: 15px;
+      }
+      .talk p {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      /* CTA Section */
+      .cta {
+        background-color: #52c5ff;
+        color: white;
+        text-align: center;
+        padding: 60px 0;
+      }
+      .cta h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      /* Testimonials Section */
+      .testimonials {
+        padding: 60px 0;
+      }
+      .testimonials h2 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .testimonial {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .testimonial p {
+        font-size: 18px;
+        font-style: italic;
+      }
+      .testimonial img {
+        width: 80px;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+      .testimonial h4 {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div>
+        <a href="index.html" style="text-decoration: none"
+          ><img src="img/logo1.jpg" alt="" height="40" width="40"
+        /></a>
+      </div>
+      <a
+        href="/courses"
+        style="
+          text-decoration: none;
+          color: inherit;
+          transition: transform 0.3s ease;
+        "
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'"
+        >Courses</a
+      >
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Personalised Learning Platform</h1>
+        <p>Solve our quizzes to know you performance.</p>
+        <br />
+        <img
+          src="img/shutterstock_749036344.jpg"
+          height="350"
+          width="750"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- About Section -->
+
+    <!-- Talks Section -->
+    <section class="talks">
+      <div class="container">
+        <h2>Languages We Are Covering Right Now</h2>
+        <div class="talks-grid">
+          <div class="talk">
+            <img src="img/imgpy.png" alt="Python" />
+            <h3>Python</h3>
+            <p>
+              Python is a dynamic, interpreted (bytecode-compiled) language.
+              There are no type declarations of variables, parameters,
+              functions, or methods in source code. This makes the code short
+              and flexible, and you lose the compile-time type checking of the
+              source code.
+            </p>
+          </div>
+          <div class="talk">
+            <img src="img/imgjava.png" alt="Java " />
+            <h3>Java</h3>
+            <p>
+              Java is a class-based, object-oriented programming language and is
+              designed to have as few implementation dependencies as possible. A
+              general-purpose programming language made for developers to write
+              once run anywhere that is compiled Java code can run on all
+              platforms that support Java.
+            </p>
+          </div>
+          <div class="talk">
+            <img src="img/imgc.png" alt="C++" />
+            <h3>C++</h3>
+            <p>
+              C++ is an object-oriented programming language which gives a clear
+              structure to programs and allows code to be reused, lowering
+              development costs. C++ is portable and can be used to develop
+              applications that can be adapted to multiple platforms. C++ is fun
+              and easy to learn!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="signup">
+      <div class="container">
+        <h2>Ready For Quiz?</h2>
+        <br />
+        <a href="courses.html" class="cta-button" color="black">Try Now</a>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>We will be updating it soon.</h2>
+        <div class="testimonial">
+          <p>"Stay tuned!!"</p>
+          <img src="https://example.com/testimonial1.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>
+        &copy; 2024 EdTalks. All rights reserved. | Privacy Policy | Terms of
+        Service
+      </p>
+    </footer>
+  </body>
+</html>
